@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+CERT_URL=https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+
+echo "downloading ${CERT_URL}"
+
+curl -O ${CERT_URL}
