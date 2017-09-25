@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
 
+BUILD_DIR=$1
 CERT_URL=https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
 
 echo "downloading ${CERT_URL}"
 
-curl -O ${CERT_URL}
+curl --silent ${CERT_URL} > $BUILD_DIR/rds-combined-ca-bundle.pem
+exit $?
