@@ -2,7 +2,7 @@
 # bin/compile <build-dir> <cache-dir>
 
 BUILD_DIR=$1
-CERT_URL=https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+CERT_URL=https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
 
 echo "downloading ${CERT_URL}"
 
